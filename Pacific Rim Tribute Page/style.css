@@ -1,0 +1,56 @@
+:root{
+  --width: 620px;
+}
+body{
+  background-color: #000000;
+}
+main{
+  padding: 40px;
+  background-color: #000000;
+  text-align: center;
+  color: #ffffff;
+  border: 15px solid #c90e21;
+  width: 700px;
+  margin: auto;
+}
+
+h1{
+  font-weight: bold;
+  font-family: "arial";
+  font-size: 40px;
+}
+h2{
+  font-weight: bold;
+  font-family: "arial";
+  font-size: 30px;
+}
+p{
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.6;
+}
+#tribute-link{
+  color: #4d7fff;
+}
+#tribute-info{
+  width: var(--width);
+  margin: auto;
+}
+#title{
+  width: var(--width);
+  margin: auto;
+}
+#img-div{
+  width: var(--width);
+  margin: auto;
+}
+#image {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+#youtube-video{
+  width: var(--width);
+  margin: auto;
+}
