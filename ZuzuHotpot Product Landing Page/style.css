@@ -1,0 +1,123 @@
+body{
+  margin: 0;
+  background-color: #cf8a4a;
+  padding-top: 200px;
+  font-family: 'Baloo', cursive;
+}
+.big-font{
+  font-family: 'Baloo', cursive;
+  font-weight: bold;
+  font-size: 40px;
+}
+table{
+  padding-left: 2em;
+  border-spacing: 10px 10px;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  background-color: #ffd801;
+  width: 100%;
+  height: 6em;
+  padding: 1em;
+}
+#header-img{
+  float: left;
+  padding-left: 20px;
+}
+ul{
+  margin-right: 2em;
+  overflow: hidden;
+  display: flex;
+  float: right;
+}
+li{
+  font-family: /*'Raleway', sans-serif;*/ 'Baloo', cursive;
+  font-weight: bold;
+  display: inline-block;
+  padding: 1em;
+}
+li a { 
+  display: block;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #cf8a4a;
+}
+li a:active{
+  background-color: #784211;
+}
+
+#build-hotpot{
+  border: 5px solid #000000;
+  border-radius: 20px;
+  background-color: #ffffff;
+  width:50%;
+  margin: auto;
+}
+#form{
+  position: static;
+  padding: 10px 3em 3em;
+}
+#checkout{
+  margin-bottom: 30px;
+}
+#submit{
+  margin-left: 40%;
+}
+
+@media (max-width: 375px)
+(max-width: 795px){
+  #prodDetails-image, #prodDetails-description, img{
+    width: 100%;
+    tex-align: -webkit-center;
+    font-size: 25px;
+  }
+}
+
+#hotpot-ideas{
+  text-align: center;
+  padding: 3em;
+}
+#contact-us{
+  text-align: center;
+  border: 5px solid #000000;
+  border-radius: 20px;
+  background-color: #ffffff;
+  width:50%;
+  margin: auto;
+  padding-bottom: 30px;
+}
+#input{
+  border
+  padding: 20px;
+  margin: 0px 20px 10px 10px;
+  line-height: 3;
+}
+#text-area{
+  margin-bottom: 20px;  
+}
+footer{
+  color: white;
+}
+footer ul{
+  display: inline;
+  padding-right: 3em;
+}
+input[type=submit]{
+  font-family: 'Baloo', cursive;
+  font-weight: bold;
+  background-color: #ffd801;
+  border-radius: 10px;
+  border: none;
+  color: #0000000;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
