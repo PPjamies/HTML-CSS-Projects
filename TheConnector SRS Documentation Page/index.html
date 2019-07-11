@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page</title>
+  <style>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">  
+  </style>
+      
+<link rel="stylesheet" href="./style.css">
+  
+</head>
+
+<body>
+
+<div id="nav-div">
+  <nav id="navbar">  
+    <header><h2>TheConnector Web-Chat Software Requirement Specification</h2></header>
+    <ul class="nav-ul">
+      <li class="nav-li a"><a class="nav-link" href="#1._Introduction" onclick= "hideNav()">1. Introduction</a></li>
+      <li class="nav-li a"><a class="nav-link" href="#2._Overall_Description" onclick= "hideNav()">2. Overall Description</a></li>
+      <li class="nav-li a"><a class="nav-link" href="#3._Specific_Requirements" onclick= "hideNav()">3. Specific Requirements</a></li>
+      <li class="nav-li a"><a class="nav-link" href="#4._Other_Non-Functional_Requirements" onclick= "hideNav()">4. Other Non-Functional Requirements</a></li>
+      <li class="nav-li a"><a class="nav-link" href="#5._Other_Requirements" onclick= "hideNav()">5. Other Requirements</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="main-doc">   
+  <article>
+    
+ <!--SECTION 1--> 
+    <section class="main-section" id="1._Introduction">
+      <header><h1>1. Introduction</h1></header>
+      <p>Communication started since the beginning of human creation as a way to exchange messages. Distant communication began as early as the 18th century with the introduction of television, telegraph, and then telephony.
+The emergence of computer network and telecommunication technologies bear the same objective, that is to allow people to communicate. Teleconferencing or Chatting is a method of using technology to bring people and ideas together despite of the geographical barriers. This project is to create an easy-to-use web application that allow an instant messaging solution to enable users to seamlessly communicate with each other.
+This section goes into further detail on the product scope, target audiences, overview, acronyms used, and references to standards and best practices.</p>
+      
+      <h2>1.1 Document Purpose</h2>
+      <p>Purpose of this software requirement specification document is to provide a complete description of the features which will be implemented in this social platform project. Moreover, this document includes user scenarios, working principles of the system, and internal and external interfaces.
+Intended audiences are users and the development team. Use case diagrams will provide visual description for users and use case narrative will provide technical information for developers. Also, tests can be defined according to use case descriptions in this document.</p>
+      
+      <h2>1.2 Product Scope</h2>
+      <p>Our application will be on mobile devices, to allow accessibility to a larger population since cellphones are used by a large and diverse audience, from youngsters to elders. The software will be easy to use and synchronized with the user’s contacts. This will be an automatic process when the user downloads the software. The user will only be able to send messages to people in his contact list that also have downloaded the software and have registered themselves. Some basics feature the software will incorporate are: creating groups, sending text messages, images, videos, audios and other types of files.</p>
+      
+      <h2>1.3 Intended Audience and Document Overview</h2>
+      <p>The intended audiences and stakeholders for this specification documentation includes:</p>
+      <ul>
+        <li>Client Marketing Corporation Employees:</li>
+        <ul>
+          <li>Managers</li>
+          <li>Customer representatives</li>
+          <li>User support agents</li>
+        </ul>
+        <li>Consulting Employees:</li>
+        <ul>
+          <li>Project managers</li>
+          <li>Project team</li>
+          <li>Architects</li>
+          <li>Designers</li>
+          <li>Programmers</li>
+          <li>Quality engineers</li>
+          <li>Testers</li>
+        </ul>
+        <li>Users:</li>
+        <ul>
+          <li>Simple users</li>
+        </ul>
+      </ul>
+        
+      <h2>1.4 Definitions, Acronyms, and Abbreviations</h2>
+      <table>
+        <tr>
+          <th>Term</th>
+          <th>Definition</th>
+        </tr>
+        <tr>
+          <td>AGILE</td>
+          <td><span class="required">an approach to software development that emphasizes “adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change.”</span></td>
+        </tr>
+        <tr>
+          <td>GUI</td>
+          <td>Graphical user interface</td>
+        </tr>
+        <tr>
+          <td>SRS</td>
+          <td>Software Requirements Specification</td>
+        </tr>
+        <tr>
+          <td>IEEE</td>
+          <td>Institute of Electrical and Electronic Engineers</td>
+        </tr>
+        <tr>
+          <td>SVN</td>
+          <td>Software versioning and revision control system.</td>
+        </tr>
+        <tr>
+          <td>User</td>
+          <td>Simple user, the one that uses the app for personal use.</td>
+        </tr>
+        <tr>
+          <td>Interaction</td>
+          <td>All exchange between two or more users through the app.</td>
+        </tr>
+        <tr>
+          <td>Friend</td>
+          <td>A user that is connected to another have a “friend” relationship with them.</td>
+        </tr>
+        <tr>
+          <td>E2EE</td>
+          <td>End-to-End Encryption.</td>
+        </tr>
+        <tr>
+          <td>CHM</td>
+          <td>Compiled HTML file format.</td>
+        </tr>
+        <tr>
+          <td>HTTPS</td>
+          <td>Hypertext Transfer Protocol Secure.</td>
+        </tr>
+        <tr>
+          <td>NPM</td>
+          <td>Node Package Manager.</td>
+        </tr>
+        <tr>
+          <td>NodeJS</td>
+          <td>Open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.</td>
+        </tr>
+        <tr>
+          <td>CLI</td>
+          <td>Command Line Interface.</td>
+        </tr>
+        <tr>
+          <td>JSON</td>
+          <td>A text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages.</td>
+        </tr>
+        <tr>
+          <td>JWT</td>
+          <td>JSON Web Token.</td>
+        </tr>
+      </table>
+      
+      <h2>1.5	Document Conventions</h2>
+      <p>The document will follow IEEE template formats for RSD. The document will use Calibri font size 12 for all the body text and 14-16 for headings. Also, it will be written in single line layout.</p>
+
+      <h2>1.6	References and Acknowledgments</h2>
+      <p>IEEE. IEEE Std. 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998. Chat21-cloud function:</p>
+      <a href="http://www.chat21.org/docs/platform/">http://www.chat21.org/docs/platform/</a><br>
+      <a href="https://github.com/chat21/chat21-cloud-functions#pre-requisites">https://github.com/chat21/chat21-cloud-functions#pre-requisites</a><br>
+      
+      <p>Virgil security’s virgilsdk and virgilcrypto libraries:</p>
+      
+      <a href="https://developer.virgilsecurity.com/docs/javascript/use-cases/v5/encrypted-communication?_ga=2.150875190.1246733894.1558713654-1679394912.1558713654">https://developer.virgilsecurity.com/docs/javascript/use-cases/v5/encrypted-communication?_ga=2.150875190.1246733894.1558713654-1679394912.1558713654</a>
+    </section>
+
+<!--SECTION 2-->    
+    <section class="main-section" id="2._Overall_Description">
+      <header><h1>2. Overall Description</h1></header>
+      <h2>2.1	Product Perspective</h2>
+      <p>TheConnector is a Firebase web-chat application which features functionalities similar to most communication applications; this includes managing chats and creating a network of friends.  TheConnector will store user interactions and users’ information into a relational MySQL database to be constantly updated and fetched by the user. Furthermore, TheConnector will be built upon an open source web-chat SDK that will require TheConnector to be a Google Firebase application. Lastly (and optional), TheConnector will be upholding an E2EE standard that will encourage the application to interact with the Virgil SDK, Virgil Crypto Library, Virgil e3kit SDK, and Virgil Cloud.</p>
+      <img src="https://i.postimg.cc/fynZm26S/Chat-Application-Model.jpg" alt="product-diagram" width=600 height=600/>
+      
+      <h2>2.2 Product Functionality</h2>
+      <p>TheConnector will have the following core functionalities:</p>
+      <ul>
+        <li>Authentication Module:</li>
+        <ul>
+          <li>Allow users to register</li>
+          <li>Allow users to reset password</li>
+          <li>Allow users to login</li>
+          <li>Allow users to logout</li>
+        </ul>
+        <li>Chat Module:</li>
+        <ul>
+          <li>Users can create new chat</li>
+          <li>Users can delete chat</li>
+          <li>Users can send messages</li>
+        </ul>
+        <li>Friend list Module:</li>
+        <ul>
+          <li>Allow users to send friend request</li>
+          <li>Allow users to accept/decline friend request</li>
+          <li>Allow users to unfriend another user</li>
+        </ul>
+        <li>Account Module:</li>
+        <ul>
+          <li>Allow users to update account information</li>
+        </ul>
+      </ul>
+      
+      <h2>2.3	Users and Characteristics</h2>
+      <table>
+        <tr>
+          <th>User</th>
+          <th>User</th>
+        </tr>
+        <tr>
+          <td>Purpose of Usage</td>
+          <td><ul>
+            <li>Personal</li>
+            <li>Enterprise</li>
+            <li>Community</li>
+            <li>Educational</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>Function</td>
+          <td><ul>
+            <li>Login, logout, register, reset password.</li>
+            <li>Create and delete chats.</li>
+            <li>Send messages.</li>
+            <li>Send friend request, accept/decline friend request, unfriend.</li>
+            <li>Update account information.</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>Expertise</td>
+          <td>Basic, following steps provided in the app.
+</td>
+        </tr>        
+      </table>
+      
+      <h2>2.4	Design and Implementation Constraints</h2>
+      <p>Web-Chat SDK:</p>
+        <ul>
+        <li>SDK requires TheConnector web-chat application to be a Google Firebase application.</li>
+        <li>SDK is dependent on Firebase CLI, thus additional configurations and prerequisites are required.</li>
+        <li>SDK is open source and managed by third party; bugs and issues are resolved through Chat21.</li>
+      </ul>
+    
+      <p>MySQL:</p>
+      <ul>
+        <li>MySQL database cannot store images, videos, or files; TheConnector will be restricted to sending text messages as a result.</li>
+        <li>Saved text messages have a 4,294,967,295-character limit.</li>
+        <li>Database must be reliable, dependable, and efficient.</li>
+      </ul>
+      
+      <h2>2.5 User Documentation</h2>
+      <table>
+        <tr>
+          <th>Document</th>
+          <th>Description</th>
+          <th>Format</th>
+        </tr>
+        <tr>
+          <td>User Manual</td>
+          <td>This manual will guide users on how to operate TheConnector web app as well as anything regarding customer support.</td>
+          <td>CHM</td>
+        </tr>
+      </table>
+      
+      <h2>2.6 Assumptions and Dependencies</h2>
+      <ul>
+        <li>TheConnector app relies on Chat21 open source web-chat SDK, which requires TheConnector to be a Firebase application. If Google Firebase experiences a massive update but, the Chat21 development team neglects to update their SDK, then TheConnector will encounter bugs. Depending on the severity of these bugs and the responsiveness of Chat21 to resolve these issues, TheConnector development team will have to potentially switch to a new web-chat SDK with different configurations and prerequisites.</li>
+        <li>TheConnector is a Firebase web application: users must be connected to the internet and using a web browser that is support by Google Firebase applications (Google Chrome, Firefox, Safari and Edge).</li>
+      </ul>   
+    </section>
+    
+<!--SECTION 3-->    
+    <section class="main-section" id="3._Specific_Requirements">
+      <header><h1>3. Specific Requirements</h1></header>
+      <h2>3.1 External Interface Requirements</h2>
+      <h3>3.1.1 User Interfaces</h3>
+      <h4>Main Launch Screen:</h4>
+      <p>Upon launching TheConnector web-app, a login screen will appear, prompting the user to input their username and password into the text fields provided. Beneath the text fields are two buttons: “login” and “register”. Next to the buttons is a link for users who forgot their password.</p>
+      
+      <img src="https://i.postimg.cc/WbGvBcyd/The-Connector-Login.jpg" alt="login-screen" height=300 width=300/>
+      
+      <h4>Registration Screen:</h4>
+      <p>Upon clicking “register”, the user is taken to a registration page where the following information is asked and collected: first name, last name, username, email, confirmed email, password, confirm password. A “submit” button is located at the bottom of the screen for users to submit their online registration form once they have completed it.</p>
+      
+      <img src="https://i.postimg.cc/cHRhsTGB/The-Connector-Registration.jpg" alt="registration-screen" height=300 width=300/>
+      
+      <h4>Reset Password Screen:</h4>
+      <p>Upon clicking the link “Forgot Password?”, the user is taken to a page where they can reset their password. The following data is collected before the user can hit a button to send an authentication code to their email: username and email. Once the user receives the authentication code, they may input it into a textbox, click submit, and proceed to the next step to resetting their password.</p>
+      
+      <img src="https://i.postimg.cc/4yMmjk2L/The-Connector-Reset.jpg" alt="reset-password-screen" height=300 width=300/>
+      
+      <h4>Finish Resetting Password Screen:</h4>
+      <p>Upon submitting an authentication code, the user is brought to a new page where they may continue resetting their password. The user inputs a new password, confirms the new password and clicks “reset password” button to change their password.</p>
+      
+      <img src="https://i.postimg.cc/wvq2jLxK/The-Connector-Finish-Reset.jpg" alt="finish-reset-password-screen" height=300 width=300/>
+      
+      <h4>Login Screen:</h4>
+      <p>Upon clicking the login button the user is brought to their profile page.</p>
+      
+      <h4>Logout Screen:</h4>
+      <p>Upon clicking the logout button the user is brought back to the login page.</p>
+      
+      <h4>General Frame of TheConnector App:</h4>
+      <p>The general frame of TheConnector will remain visible and active while the user is logged in. The general frame provides the user with a navigation tool that allows them to visit their chats, friend list, notifications, and profile page.</p>
+      
+      <img src="https://i.postimg.cc/fbT5wYTG/general-frame.jpg" alt="general-frame-screen" height=300 width=300/>
+    
+      <h4>Profile Screen:</h4>
+      <p>The user’s profile page will display their profile picture and username. Below the profile username will be an option to logout of the application. Besides the profile picture is an option to update account information.</p>
+      
+      <img src="https://i.postimg.cc/zX7gq6bf/Profile.jpg" alt=
+"profile-screen" height=300 width=300/>
+      
+      <h4>Friend List Screen:</h4>
+      <p>The friend list tab allows the user the ability to create new chats with those who are in their friend list by clicking on the chat bubble icon next to their friends’ names. Furthermore, the friend list tab provides a shortcut to viewing friends profiles. Lastly, users can find new/more friends to invite through typing their usernames into the search bar.</p>
+      
+      <img src="https://i.postimg.cc/J0msL5RJ/Friendlist.jpg" alt=
+"friendlist-screen" height=300 width=300/>
+      
+      <h4>Other User Profile Screen:</h4>
+      <p>Other account profile screens will look the same as user’s profile screen, but with an “add friend” icon below the username.</p>
+      <img src="https://i.postimg.cc/3w7V2yr1/Send-invite.jpg" alt=
+"other-profile-screen" height=300 width=300/>
+      
+      <h4>Friend Profile Screen:</h4>
+      <p>Users have the option to unfriend someone by navigating to their friend’s profile page and clicking the “unfriend” button.</p>
+      
+      <img src="https://i.postimg.cc/YS6kHK0n/whenfriends.jpg" alt=
+"friend-profile-screen" height=300 width=300/>
+      
+      <h4>Chat Screen:</h4>
+      <p>The chat screen displays the active chats in a panel to the left, while displaying the messages of the chat in a panel to the right. There is also a search bar to allow users to search up an active chat given the name of a friend. Upon selecting a chat, the user has the option to delete the chat by clicking on the “trash can” icon.</p>
+      
+      <img src="https://i.postimg.cc/0N8XbLZH/Chatting.jpg" alt=
+"chat-screen" height=300 width=300/>
+      
+      <h4>Notification Screen:</h4>
+      <p>The notification screen displays the following: user friend requests, friend invites, and those who accepted the user’s friend request. The user has the option to accept or decline a friend invite. </p>
+      
+      <img src="https://i.postimg.cc/52fDCY23/notification.jpg" alt=
+"notification-screen" height=300 width=300/>
+      
+      <h3>3.1.2 Hardware Interfaces</h3>
+      <h4>Internet Protocol</h4>
+      <p>heConnector is a web-chat application that will be using an HTTPS internet protocol.</p>
+      <h4>Application Type</h4>
+      <p>TheConnector will be using Chat21 open source web-chat SDK that requires TheConnector application to be a Google Firebase application.</p>
+      <h4>Application Host</h4>
+      <p>TheConnector will be hosted on Google’s Firebase.</p>
+      
+      <h3>3.1.3 Software Interfaces</h3>
+      <h4>Chat21 Open Source Web-Chat SDK</h4>
+      <p>TheConnector will be using an open source web-chat SDK developed by Chat21 to integrate instant messaging components. Due to Chat21’s SDK implementation, TheConnector will need to be a Google Firebase application. The setup requirements needed to integrate Chat21 web-chat SDK are as follows:</p>
+      <div>
+        <p>Pre-requisites:</p>
+        <ul>
+          <li>NPM installation: Used to manage dependencies and connect with Firebase CLI.</li>
+          <li>NodeJS installation: Used to connect with Firebase CLI.</li>
+          <li>Create a Firebase Project.</li>
+          <li>Install Firebase CLI.</li>
+        </ul>
+        
+        <p>Project Setup:</p>
+        <ul>
+          <li>Clone or download Chat21 repository from GitHub.</li>
+          <li>Follow Chat21 chat SDK installation guide.</li>
+          <li>Login into Firebase CLI with Firebase login</li>
+          <li>Set up your Firebase project as instructed by Chat21, select Project ID and follow the instructions.</li>
+        </ul>
+        
+        <p>Project Deployment</p>
+        <ul>
+          <li><a href="http://www.chat21.org/docs/platform/">http://www.chat21.org/docs/platform/</a>
+</li>
+          <li><a href="https://github.com/chat21/chat21-cloud-functions#pre-requisites">https://github.com/chat21/chat21-cloud-functions#pre-requisites</a></li>  
+        </ul>
+        
+        <h4>Friend List and Relational Model</h4>
+        <p>TheConnector offers users a friend network building system. Friend invites will be programmed using JAVA and friendship relationships will be stored in MySQL relational database through SQL queries.</p>
+        
+        <h3>3.1.4 Communications Interfaces</h3>
+        <h4>Encryption Standards (Optional)</h4>
+        <p>TheConnector Firebase web-chat application will be using End-to-End Encryption standard to ensure users’ messages are encrypted at the source and decrypted upon message receival. E2EE will be integrated into TheConnector app through an open source third party, Virgil Security.</p>
+        <p>The following components are used to integrate Virgil Security’s E2EE method:</p>
+        <ul>
+          <li>TheConnector needs to provide users with a JWT that contains the user's identity, which is a string that uniquely identifies each user in the application.</li>
+          <li>Virgil Security’s VirgilSDK and Virgil-Crypto libraries will be used to generate and sign the JWTs on the server end.</li>
+          <li>On the client end, the Virgil Security’s e3kit SDK will be used to create and store the user's private key on their device and publish the user's corresponding public key in the Virgil Cloud, as well as providing digital signatures to verify data integrity.</li>
+        </ul>
+          
+        <img src="http://algoworksupload.s3.amazonaws.com/new-algoworks/wp-content/uploads/2016/08/31133326/End-to-End-Encryption-.jpg" alt="end-to-end-encrypt" width=700 height=363/>
+
+        <h2>3.2 Functional Requirements</h2>
+        <h3>3.2.1</h3>
+        <div>
+          <img src="https://i.postimg.cc/sgrqFnQK/Usecase1.jpg" alt="usecase-1" width=500 height=300/>
+          <h3>3.2.2</h3>
+          <img src="https://i.postimg.cc/Bb3HZ1TW/usecase2.jpg" alt="usecase-2" width=400 height=300/>
+          <h3>3.2.3</h3>
+          <img src="https://i.postimg.cc/nzbQTQws/usecase3.jpg" alt="usecase-3" width=300 height=300/>
+          <h3>3.2.4</h3>
+          <img src="https://i.postimg.cc/66HppvLd/usecase4.jpg" alt="usecase-4" width=350 height=300/>
+          <h3>3.2.5</h3>
+          <img src="https://i.postimg.cc/JnYCMbV0/usecase5.jpg" alt="usecase-5" width=400 height=290/>
+          <h3>3.2.6</h3>
+          <img src="https://i.postimg.cc/xTvYbNLx/usecase6.jpg" alt="usecase-6" width=400 height=300/>
+          <h3>3.2.7</h3>
+          <img src="https://i.postimg.cc/763XN4Xk/usecase7.jpg" alt="usecase-7" width=300 height=300/>
+          <h3>3.2.8</h3>
+          <img src="https://i.postimg.cc/85pfqVND/usecase8.jpg" alt="usecase-8" width=370 height=300/>
+          <h3>3.2.9</h3>
+          <img src="https://i.postimg.cc/76HXXcRJ/usecase9.jpg" alt="usecase-9" width=370 height=300/>
+          <h3>3.2.10</h3>
+          <img src="https://i.postimg.cc/dDcK7wWT/usecase10.jpg" alt="usecase-10" width=350 height=300/>
+          <h3>3.2.11</h3>
+          <img src="https://i.postimg.cc/TPBG8Vr9/usecase11.jpg.jpg" alt="usecase-11" width=345 height=300/>
+        </div>
+        
+        <h2>3.3 Behavior Requirements</h2>
+        <h3>Use Case View</h3>
+        <img src="https://i.postimg.cc/N0cqQnBv/User-system.jpg" alt="user-system" width=600 height=450/>    
+    </section>
+
+<!--SECTION 4-->
+    <section class="main-section" id="4._Other_Non-Functional_Requirements">
+      <header><h1>4. Other Non-Functional Requirements</h1></header>
+      <h2>4.1 Performance Requirements</h2>
+      <ul>
+        <li>The application will be able to support at least 10,000 simultaneous users. The capacity can be extended in the future if needed.</li>
+        <li>The application will be dealing with data obtained from account updates, instant messaging, and friend network building, which will require a relational database.</li>
+        <li>Deleting a chat, friending/unfriending a user, and account updates should be displayed within the next refresh of the page.</li>
+        <li>All the functionality that the application will perform should be executing at a speed of no more than 5 seconds.</li>
+      </ul>
+      
+      <h2>4.2 Safety and Security Requirements</h2>
+      <ul>
+        <li>Authentication cannot be hacked.</li>
+        <li>Data must be secured.</li>
+        <li>Message encryption and encrypted connections must be up to industry standards: VPN (virtual private network), SSL(secure socket layer), TLS(transport layer security), etc.</li>
+        <li>Application is resistant to malware attacks.</li>
+      </ul>
+      
+      <h2>4.3 Software Quality Attributes</h2>
+      <ul>
+        <li>4.3.1 Reliability</li>
+        <ul>
+          <li>Software should keep the database information consistent.</li>
+          <li>TheConnector graphical user interface should not crash.</li>
+          <li>Database failures should be minimal and there should be crash recovery system in order to not lose information in a potential database failure.</li>
+        </ul>
+        <li>4.3.2 Availability</li>
+        <ul>
+          <li>System should be available 7 days a week and 24 hours a day.</li>
+          <li>On the application side, system should be tested against probable failures before publishing the final version or updating a newer version of the application.</li>
+          <li>Published version should be error free.</li>
+        </ul>
+        <li>4.3.3 Maintainability</li>
+        <ul>
+          <li>Upgraded versions of the application should be easily maintained for development; it should be easy to add code to the existing system, upgrade new features, and integrate other software components.</li>
+          <li>Maintenance should be cost effective and easy.</li>
+        </ul>
+        <li>4.3.4 Portability</li>
+        <ul>
+          <li>TheConnector is a Firebase web chat application and will be accessible through different browsers such as Google Chrome, Firefox, Safari and Edge.</li>
+        </ul>
+        <li>4.3.5 Usability</li>
+        <ul>
+          <li>The app password must contain at least 8 characters that includes at least one lower-case letter and one upper-case letter. The password must also contain a special character.</li>
+          <li>The user name cannot be empty and should be unique</li>
+          <li>The application should be simple to navigate and easy to learn.</li>
+          <li>Easy to use for input preparation, operation, and interpretation of output.</li>
+          <li>Provide consistent user interface standards or conventions with our other frequently used systems.</li>
+          <li>Easy for new or infrequent users to learn to use the system.</li>
+        </ul>
+      </ul>
+    </section>
+      
+    <section class="main-section" id="5._Other_Requirements">
+      <header><h1>5. Other Requirements</h1></header>
+      <p>Optional Feature: We are thinking to have a folder-like structure that would allow users within groups to organize their shared-files.</p>
+      <p>Optional Requirement: Code must be readible. Examples of preferred programming styles are shown below:</p><br>
+      <ul>
+        <li><code>/*This forloop is doing...*/<br>
+        for(int i=10; i>=0; i--){System.out.println("blah");} </code></li>
+        
+        <li><code>/*The variables in the forloop are self explainatory*/<br>
+        for(int numOfApples= 10; numOfApples>=0; numOfApples--){System.out.println("blah");} </code></li>
+        
+        <li><code>/*Avoid smelly code like the one below*/<br>
+        public static int badCodeSmell(int x, int y){<br>
+            int a = x;<br>
+            int b = y;<br>
+            int sum = 0;<br>
+            int average = 0;<br>
+            sum = a + b;<br>
+            average = sum / 2;<br>
+            return average;<br>
+          } </code></li>
+        
+        <li><code>/*Instead, try to reduce redundancy as much as possible*/<br>
+        public static int badCodeSmell(int x, int y, int count){<br>
+            return ((x+y)/count);<br>
+          } </code></li>
+        
+        <li><code>/*Indent whenever possible, avoid indenting like the code below*/<br>
+          for(String number: numbers){for(int i=0; i&lt; number.length(); i++){System.out.println(i);}}</code></li>
+      </ul>
+    </section>
+    
+  </article>
+</main>
+<footer>
+</footer>
+  
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
